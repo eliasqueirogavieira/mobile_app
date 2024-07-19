@@ -1,4 +1,3 @@
-// src/main/java/com/suffragium/main/controller/SpotifyController.java
 package com.suffragium.main.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +22,22 @@ public class SpotifyController {
                 .get()
                 .uri("https://api.spotify.com/v1/me")
                 .headers(headers -> headers.setBearerAuth(authorizedClient.getAccessToken().getTokenValue()))
+                .retrieve()
+                .bodyToMono(String.class)
+                .block();
+
+        return ResponseEntity.ok(response);
+    }
+
+    @GetMapping("/play")
+    public ResponseEntity<String> playPlaylist(@RegisteredOAuth2AuthorizedClient("spotify") OAuth2AuthorizedClient authorizedClient) {
+        String playlistUri = "spotify:playlist:7gCEHUvpoGZqr1p3Cn9sTU";
+
+        String response = webClientBuilder.build()
+                .put()
+                .uri("https://api.spotify.com/v1/me/player/play")
+                .headers(headers -> headers.setBearerAuth(authorizedClient.getAccessToken().getTokenValue()))
+                .bodyValue("{\"context_uri\":\"" + playlistUri + "\"}")
                 .retrieve()
                 .bodyToMono(String.class)
                 .block();
