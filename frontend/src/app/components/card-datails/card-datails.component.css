@@ -1,0 +1,140 @@
+music-list {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  font-family: 'Arial', sans-serif;
+  padding: 0 10px;
+}
+
+.music-item {
+  margin-bottom: 10px; /* Espaçamento entre os cartões */
+}
+
+.custom-card {
+  background-color: #1e1e1e !important; /* Cor de fundo do card */
+  color: #E0E0E0 !important; /* Cor do texto dentro do card */
+}
+
+.music-item mat-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.user-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-icon-size {
+  height: 50px;
+  width: 50px;
+  font-size: 50px; /* Altera o tamanho do ícone do usuário */
+  overflow: hidden; /* Garante que o ícone não seja cortado */
+}
+
+.playing-icon {
+  margin-left: 5px; /* Espaço entre o título da música e o ícone de música */
+  color: #1DB954; /* Verde característico */
+}
+
+.song-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.song-info {
+  display: flex;
+  align-items: center;
+}
+
+.song-title {
+  font-weight: bold;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.submitted-by {
+  display: block;
+  font-size: 0.9em;
+  color: #E0E0E0; /* Cor do texto claro */
+  margin-top: 5px;
+}
+
+.vote-controls {
+  margin-right: 10px;
+}
+
+.vote-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.vote-icon {
+  color: green;
+}
+
+.score {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #E0E0E0; /* Cor do texto claro */
+  margin-left: auto;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 770px) {
+  .music-item mat-card-content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .user-icon {
+    margin-right: 10px;
+  }
+
+  .user-icon-size {
+    font-size: 50px; /* Define o tamanho do ícone do usuário */
+  }
+
+  .song-details {
+    flex-direction: column;
+    margin-left: 0;
+    flex-grow: 1;
+  }
+
+  .song-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .song-title {
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  .submitted-by {
+    margin-top: 5px;
+    align-self: flex-start;
+  }
+
+  .score {
+    order: 3;
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+
+  .vote-controls {
+    order: 2;
+    margin-top: 10px;
+  }
+}
