@@ -3,7 +3,7 @@ import {MatCard, MatCardContent} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {CommonModule} from "@angular/common";
-import {MusicDetailsDTO} from "../../dto/musicDetails.dto";
+import {MusicDetailsDto} from "../../dto/music-details.dto";
 
 
 @Component({
@@ -21,7 +21,7 @@ import {MusicDetailsDTO} from "../../dto/musicDetails.dto";
 })
 export class CardDatailsComponent {
 
-  songs: MusicDetailsDTO[] = [
+  songs: MusicDetailsDto[] = [
     { title: 'Hotline Bling', artist: 'Drake', user: 'echianelli', score: 58 },
     { title: 'O alvo', artist: 'Diego e Victor Hugo', user: 'deboraskalat', score: 45 },
     { title: 'Corpo Sensual', artist: 'Pablo Vittar', user: 'lpabernaz', score: 36 },

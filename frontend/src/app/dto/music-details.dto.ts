@@ -1,4 +1,4 @@
-export class MusicDetailsDTO {
+export class MusicDetailsDto {
   title: string | undefined;
   artist: string | undefined;
   user: string | undefined;
