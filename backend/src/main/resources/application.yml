@@ -6,15 +6,19 @@ spring:
           spotify:
             client-id: ${SPOTIFY_CLIENT_ID}
             client-secret: ${SPOTIFY_CLIENT_SECRET}
-            scope: user-read-private,user-read-email,user-library-read,playlist-read-private
-            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
             authorization-grant-type: authorization_code
-            client-authentication-method: post
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            scope:
+              - user-read-private
+              - user-read-email
+              - playlist-modify-public
+              - user-modify-playback-state
         provider:
           spotify:
             authorization-uri: https://accounts.spotify.com/authorize
             token-uri: https://accounts.spotify.com/api/token
             user-info-uri: https://api.spotify.com/v1/me
+            user-name-attribute: id
 
 server:
   port: 8080
