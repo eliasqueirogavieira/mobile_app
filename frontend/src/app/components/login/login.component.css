@@ -1,0 +1,85 @@
+.login-container {
+  background-color: #1a1a1a; /* Cor de fundo para o container do login */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #fff; /* Cor do texto */
+}
+
+.login-header .logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.login-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.login-btn {
+  background-color: #1db954;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 5px 0;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+}
+
+.login-btn.google {
+  background-color: #4285F4;
+}
+
+.login-btn.facebook {
+  background-color: #3b5998;
+}
+
+.login-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-submit {
+  background-color: #1db954;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.forgot-password {
+  color: #1db954;
+  margin-top: 10px;
+  display: block;
+}
+
+.signup-link {
+  margin-top: 20px;
+}
+
+.signup-link a {
+  color: #1db954;
+}

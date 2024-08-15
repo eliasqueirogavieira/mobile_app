@@ -1,0 +1,24 @@
+<div class="music-list">
+  <mat-card *ngFor="let song of songs; let i = index" class="music-item custom-card">
+    <mat-card-content>
+      <div class="user-icon">
+        <mat-icon class="user-icon-size">account_circle</mat-icon>
+      </div>
+      <div class="song-details">
+        <div class="song-info">
+          <span class="song-title">
+            {{ song.title }} - {{ song.artist }}
+            <mat-icon *ngIf="i == 0" class="playing-icon">volume_up</mat-icon>
+          </span>
+        </div>
+        <span class="submitted-by">enviado por: {{ song.user }}</span>
+      </div>
+      <div class="vote-controls">
+        <button mat-icon-button (click)="increaseScore(i)">
+          <mat-icon class="vote-icon">favorite</mat-icon>
+        </button>
+      </div>
+      <div class="score">{{ song.score }}</div>
+    </mat-card-content>
+  </mat-card>
+</div>
